@@ -19,4 +19,4 @@ Setting Up Cronjob
 sudo crontab -e
 
 #Input job to run script every Friday at 11PM
-0 23 * * 5 ./buildscript1.sh
+0 23 * * 5 ~/buildscript1.sh
