@@ -1,0 +1,21 @@
+Nalani Daniels
+August 30, 2023
+
+# Purpose:
+Create a script called buildscript1.sh that updates the server, creates a file that indicates how many packages can be upgraded, and saves that output to a file titled 'update$date.txt'
+
+# Script:
+#!/bin/bash
+
+#Updates the server, then finds where the output specifies how many packages can be upgraded. Saves that output to a file with the date.
+sudo apt update | grep "upgraded" | cut -f 1 -d "." > update$(date +"%m.%d.%Y").txt
+
+# Changing Permissions
+chmod 700 buildscript1.sh
+
+# Setting Up Cronjob
+#Open the cronjob file for my user ubuntu
+sudo crontab -e
+
+#Input job to run script every Friday at 11PM
+0 23 * * 5 ./buildscript1.sh
