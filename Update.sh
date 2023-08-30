@@ -7,7 +7,7 @@ Create a script called buildscript1.sh that updates the server, creates a file t
 # Script:
 #!/bin/bash
 
-#Updates the server, then finds where the output specifies how many packages can be upgraded. Saves that output to a file with the date.
+#Updates the server's repository, then uses the grep command to find where the output specifies how many packages can be upgraded. The cut command simply carves out the relevant information, and then the output is redirected to a file with the date.
 sudo apt update | grep "upgraded" | cut -f 1 -d "." > update$(date +"%m.%d.%Y").txt
 
 # Changing Permissions
