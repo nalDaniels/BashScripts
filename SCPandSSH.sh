@@ -43,7 +43,7 @@ do
                                                         read -p "Enter remote destination for file folder: " destination   
                                                        #If you add a name to the destination variable it will rename the copied
                                                        #file. If you do not, it will use the source name
-                                                         scp "$source" "$username@$IPAddress":"$destination" ;;
+                                                         scp $source $username@$IPAddress:$destination ;;
                                                 * )
                                                         echo "Please choose remotetolocal or localtoremote" ;;
 
