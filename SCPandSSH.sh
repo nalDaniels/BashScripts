@@ -1,3 +1,6 @@
+Nalani Daniels 
+September 6, 2023 
+
 Purpose:
 To initiate a ssh session between a local and remote server. Also, to have an option to scp files to from a local server to a remote server and from a remote server to a local server
 
