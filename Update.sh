@@ -1,8 +1,8 @@
-Nalani Daniels
-August 30, 2023
+# Nalani Daniels
+# August 30, 2023
 
-Purpose:
-Create a script called buildscript1.sh that updates the server, creates a file that indicates how many packages can be upgraded, and saves that output to a file titled 'update$date.txt'
+# Purpose:
+# Create a script called buildscript1.sh that updates the server, creates a file that indicates how many packages can be upgraded, and saves that output to a file titled 'update$date.txt'
 
 Script:
 #Indicate this file is a bash script
