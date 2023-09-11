@@ -25,7 +25,7 @@ do
                         echo "You selected scp."
                         read -p "Enter the username of the remote server: " username
                         read -p "Enter the IP Address of the remote server: " IPAddress
-                        echo "Enter the scp direction: "
+                        echo "Which direction are you sending files from? Your local computer to a remote server? Or remote server to local computer?": "
                         select direction in remotetolocal localtoremote     
                                 do
                                         #Create a case statement for each case - remote to local and local to remote
@@ -33,17 +33,17 @@ do
                                                 #Create a keypair on the remote server, then copy it to the local server's authorized_keys
                                                 #Run these commands from your local server
                                                 "remotetolocal" )
-                                                        read -p "Enter remote source of file: " source
-                                                        read -p "Enter local destination for file: " destination    
+                                                        read -rp "Enter remote source of file: " source
+                                                        read -rp "Enter local destination for file: " destination    
                                                        #If you add a name to the destination variable it will rename the copied
                                                        #file. If you do not, it will use the source filename. 
-                                                         scp $username@$IPAddress:$source $destination ;;
+                                                         scp "$username@$IPAddress:$source" "$destination" ;;
                                                 "localtoremote" )
-                                                        read -p "Enter local source of file: " source
-                                                        read -p "Enter remote destination for file folder: " destination   
+                                                        read -rp "Enter local source of file: " source
+                                                        read -rp "Enter remote destination for file folder: " destination   
                                                        #If you add a name to the destination variable it will rename the copied
                                                        #file. If you do not, it will use the source name
-                                                         scp $source $username@$IPAddress:$destination ;;
+                                                         scp "$source" "$username@$IPAddress:$destination" ;;
                                                 * )
                                                         echo "Please choose remotetolocal or localtoremote" ;;
 
