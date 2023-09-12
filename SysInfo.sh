@@ -6,7 +6,8 @@ select option in "Current Logged User" "Your Shell Directory" "Home Directory" "
 do
   #Create a case statement that executes commands based on system information menu selection
   case $option in
-    "Current Logged User" )
+          "Current Logged User" )
+            
   
 
 
