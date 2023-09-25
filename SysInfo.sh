@@ -21,7 +21,7 @@ do
         "Home Directory" )
                 echo "The home directory is "
                 echo $HOME ;;
-                "OS Name & Version" )
+        "OS Name & Version" )
                 echo "The OS name and version is: "
                 cat /etc/os-release | grep "PRETTY_NAME" | cut -f 2 -d "=" ;;
         "Current Working Directory" )
